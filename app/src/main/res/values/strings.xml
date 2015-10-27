@@ -3,4 +3,21 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="btn_table">Таблица</string>
+    <string name="start">МОТОР!</string>
+    <string name="nonetime">00:00</string>
+    <string name="cam1">Камера 1</string>
+    <string name="cam2">Камера 2</string>
+    <string name="cam3">Камера 3</string>
+    <string name="def_take">1</string>
+    <string name="take">Дубль</string>
+    <string name="rec1">Рекордер 1</string>
+    <string name="rec2">Рекордер 2</string>
+    <string name="rec3">Рекордер 3</string>
+    <string name="director">Режиссер</string>
+    <string name="shot">Кадр</string>
+    <string name="def_scene">0</string>
+    <string name="scene">Сцена</string>
+    <string name="def_shot">0</string>
+    <string name="filmname">Название фильма</string>
 </resources>

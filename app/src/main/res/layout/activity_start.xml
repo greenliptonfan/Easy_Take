@@ -52,12 +52,11 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x"
                 android:id="@+id/buttonCloseNew"
                 android:layout_gravity="right|top"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="#ffffff" />
+                android:background="@drawable/abc_ic_clear_mtrl_alpha" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -129,7 +128,8 @@
                 android:id="@+id/buttonOpenTable"
                 android:layout_gravity="center_horizontal"
                 android:layout_weight="0.05"
-                android:layout_marginTop="30dp" />
+                android:layout_marginTop="30dp"
+                android:background="@android:drawable/ic_menu_close_clear_cancel" />
 
             <Button
                 style="?android:attr/buttonStyleSmall"

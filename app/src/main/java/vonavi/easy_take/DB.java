@@ -21,6 +21,22 @@ public class DB {
     public static final String COLUMN_ID = "_id";
     public static final String COLUMN_TITLE = "title";
 
+    /**
+     public static final String DATABASE_TABLE = "cinema";
+     public static final String TITLE_COLUMNE = "Title";
+     public static final String SCENE_COLUMNE = "Scene";
+     public static final String SHOT_COLUMNE = "Shot";
+     public static final String TAKE_COLUMNE = "Take";
+     public static final String CAM1_COLUMNE = "Cam1";
+     public static final String CAM2_COLUMNE = "Cam2";
+     public static final String CAM3_COLUMNE = "Cam3";
+     public static final String REC1_COLUMNE = "Rec1";
+     public static final String REC2_COLUMNE = "Rec2";
+     public static final String REC3_COLUMNE = "Rec3";
+     public static final String DIRECTOR_COLUMNE = "Director";
+     public static final String DATE_COLUMNE = "Date";
+
+     **/
     public DB(Context ctx) {
         mCtx = ctx;
     }
