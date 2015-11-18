@@ -19,6 +19,9 @@
         <activity android:name=".TakeActivity">
 
         </activity>
+        <activity android:name=".TableActivity">
+
+        </activity>
     </application>
 
 </manifest>

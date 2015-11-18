@@ -1,10 +1,13 @@
 package vonavi.easy_take;
 
+import android.annotation.TargetApi;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
@@ -27,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Objects;
 
 /**
  * Created by Валентин on 28.10.2015.
@@ -337,6 +341,39 @@ public class TakeActivity extends FragmentActivity implements LoaderManager.Load
             }
         });
         //реализация кнопки таблица
+        final String FilmT = title_show.getText().toString();
+        button_table = (Button) findViewById(R.id.button_table);
+        button_table.setOnClickListener(new View.OnClickListener() {
+            @TargetApi(Build.VERSION_CODES.KITKAT)
+            @Override
+            public void onClick(View v) {
+                String SceneT = scene_edit.getText().toString();
+                String ShotT = shot_edit.getText().toString();
+                if (SceneT.equals("-")) {
+                    Toast toastSc = Toast.makeText(context, "Сцена не выбрана", Toast.LENGTH_LONG);
+                    toastSc.show();
+                } else {
+                    if (ShotT.equals("-")) {
+                        Toast toastSh = Toast.makeText(context, "Кадр не выбран", Toast.LENGTH_LONG);
+                        toastSh.show();
+                    } else {
+                        int nextTakeT = db.getNextTake(db.getShotID(ShotT,
+                        db.getSceneID(SceneT,
+                                db.getTitleID(getIntent().getExtras().getString("title")))));
+                        if (nextTakeT!=1) {
+                            Intent intent = new Intent(TakeActivity.this, TableActivity.class);
+                            intent.putExtra("title", FilmT);
+                            intent.putExtra("sceneT", SceneT);
+                            intent.putExtra("shotT", ShotT);
+                            startActivity(intent);
+                        } else {
+                            Toast toastNF = Toast.makeText(context, "Вы еще не снимали этот кадр", Toast.LENGTH_LONG);
+                            toastNF.show();
+                        }
+                    }
+                }
+            }
+        });
     }
 
     @Override

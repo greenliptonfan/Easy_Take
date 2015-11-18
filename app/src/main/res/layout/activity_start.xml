@@ -122,24 +122,15 @@
                 android:layout_marginTop="60dp" />
 
             <Button
-                android:layout_width="131dp"
-                android:layout_height="wrap_content"
-                android:text="Открыть в таблице"
-                android:id="@+id/buttonOpenTable"
-                android:layout_gravity="center_horizontal"
-                android:layout_weight="0.05"
-                android:layout_marginTop="30dp"
-                android:background="@android:drawable/ic_menu_close_clear_cancel" />
-
-            <Button
                 style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="x"
+                android:text=""
                 android:id="@+id/buttonCloseWorkModeChoose"
                 android:layout_gravity="bottom|right"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="50dp" />
+                android:layout_marginTop="50dp"
+                android:background="@android:drawable/ic_menu_close_clear_cancel"/>
         </LinearLayout>
 
     </FrameLayout>

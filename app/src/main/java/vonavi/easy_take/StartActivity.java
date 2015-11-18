@@ -81,7 +81,7 @@ public class StartActivity extends FragmentActivity implements LoaderCallbacks<C
 
         workModeChoose = (FrameLayout) findViewById(R.id.workModeChoose);
         buttonOpenTake = (Button) findViewById(R.id.buttonOpenTake);
-        buttonOpenTable = (Button) findViewById(R.id.buttonOpenTable);
+        //buttonOpenTable = (Button) findViewById(R.id.buttonOpenTable);
         buttonCloseWorkModeChoose = (Button) findViewById(R.id.buttonCloseWorkModeChoose);
         filmTitle = (TextView) findViewById(R.id.filmTitle);
 //открытие WorkChooseMode
@@ -108,13 +108,17 @@ public class StartActivity extends FragmentActivity implements LoaderCallbacks<C
                     }
                 });
 
-                buttonOpenTable.setOnClickListener(new View.OnClickListener() {
+                /*buttonOpenTable.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        Intent intent = new Intent(StartActivity.this, TableActivity.class);
+                        intent.putExtra("title",FilmT);
+                        startActivity(intent);
+                        workModeChoose.setVisibility(View.INVISIBLE);
+                        activityLL.setVisibility(View.VISIBLE);
                     }
                 });
-
+*/
                 buttonCloseWorkModeChoose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
